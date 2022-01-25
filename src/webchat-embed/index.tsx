@@ -99,5 +99,6 @@ window.initWebchat = initWebchat;
 
 // @ts-ignore
 window.__COGNIGY_WEBCHAT = {
-    React
+    React,
+    ReactDOM
 };
