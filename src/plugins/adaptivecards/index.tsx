@@ -22,6 +22,13 @@ const AdaptiveCards = (props) => {
 
                 return;
             }
+
+            case "Action.OpenUrl": {
+                const url = action._propertyBag?.url;
+                window.open(url, "_blank");
+
+                return;
+            }
         }
     }, [onSendMessage]);
 
@@ -40,7 +47,7 @@ const AdaptiveCards = (props) => {
     }, [cardPayload]);
 
     return (
-        <div className='adaptivecard-wrapper'>
+        <div className='adaptivecard-wrapper internal'>
             {card}
         </div>
     )
